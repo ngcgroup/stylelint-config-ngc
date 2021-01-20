@@ -24,6 +24,15 @@
 .selector-y { width: 20%; }
 .selector-z { width: 30%; }
 
+.selector-w {
+  &--xyz {
+    $margin-right: 0.8rem;
+    --custom-property: 0.5em;
+    margin-left: var(--custom-property);
+    margin-right: $margin-right;
+  }
+}
+
 /* Single-line comment */
 
 @media (min-width >= 60em) {
