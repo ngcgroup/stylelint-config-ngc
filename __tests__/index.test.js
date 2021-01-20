@@ -1,82 +1,83 @@
-"use strict";
+/* global beforeEach, describe, expect, it */
+'use strict'
 
-const config = require("../");
-const fs = require("fs");
-const stylelint = require("stylelint");
+const config = require('../')
+const fs = require('fs')
+const stylelint = require('stylelint')
 
-const validCss = fs.readFileSync("./__tests__/css-valid.css", "utf-8");
-const invalidCss = fs.readFileSync("./__tests__/css-invalid.css", "utf-8");
+const validCss = fs.readFileSync('./__tests__/css-valid.css', 'utf-8')
+const invalidCss = fs.readFileSync('./__tests__/css-invalid.css', 'utf-8')
 
-describe("flags no warnings with valid css", () => {
-  let result;
+describe('flags no warnings with valid css', () => {
+  let result
 
   beforeEach(() => {
     result = stylelint.lint({
       code: validCss,
-      config,
-    });
-  });
+      config
+    })
+  })
 
-  it("did not error", () => {
-    return result.then((data) => expect(data.errored).toBeFalsy());
-  });
+  it('did not error', () => {
+    return result.then((data) => expect(data.errored).toBeFalsy())
+  })
 
-  it("flags no warnings", () => {
+  it('flags no warnings', () => {
     return result.then((data) =>
       expect(data.results[0].warnings).toHaveLength(0)
-    );
-  });
-});
+    )
+  })
+})
 
-describe("flags warnings with invalid css", () => {
-  let result;
+describe('flags warnings with invalid css', () => {
+  let result
 
   beforeEach(() => {
     result = stylelint.lint({
       code: invalidCss,
-      config,
-    });
-  });
+      config
+    })
+  })
 
-  it("did error", () => {
-    return result.then((data) => expect(data.errored).toBeTruthy());
-  });
+  it('did error', () => {
+    return result.then((data) => expect(data.errored).toBeTruthy())
+  })
 
-  it("flags one warning", () => {
+  it('flags one warning', () => {
     return result.then((data) =>
       expect(data.results[0].warnings).toHaveLength(1)
-    );
-  });
+    )
+  })
 
-  it("correct warning text", () => {
+  it('correct warning text', () => {
     return result.then((data) =>
       expect(data.results[0].warnings[0].text).toBe(
-        "Expected a leading zero (number-leading-zero)"
+        'Expected a leading zero (number-leading-zero)'
       )
-    );
-  });
+    )
+  })
 
-  it("correct rule flagged", () => {
+  it('correct rule flagged', () => {
     return result.then((data) =>
-      expect(data.results[0].warnings[0].rule).toBe("number-leading-zero")
-    );
-  });
+      expect(data.results[0].warnings[0].rule).toBe('number-leading-zero')
+    )
+  })
 
-  it("correct severity flagged", () => {
+  it('correct severity flagged', () => {
     return result.then((data) =>
-      expect(data.results[0].warnings[0].severity).toBe("error")
-    );
-  });
+      expect(data.results[0].warnings[0].severity).toBe('error')
+    )
+  })
 
-  it("correct line number", () => {
+  it('correct line number', () => {
     return result.then((data) =>
       expect(data.results[0].warnings[0].line).toBe(2)
-    );
-  });
+    )
+  })
 
-  it("correct column number", () => {
+  it('correct column number', () => {
     return result.then((data) =>
       expect(data.results[0].warnings[0].column).toBe(8)
-    );
-  });
-});
+    )
+  })
+})
