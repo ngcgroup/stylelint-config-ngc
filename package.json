@@ -1,0 +1,21 @@
+{
+  "name": "@ngcgroup/stylelint-config-ngc",
+  "version": "0.0.1",
+  "description": "Maintain a set of stylelint rules to keep in sync across NGC apps",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngcgroup/stylelint-config-ngc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ngcgroup/stylelint-config-ngc/issues"
+  },
+  "homepage": "https://github.com/ngcgroup/stylelint-config-ngc#readme"
+}
