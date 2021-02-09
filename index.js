@@ -10,12 +10,14 @@ module.exports = {
     'declaration-property-unit-disallowed-list': {
       'font-size': ['vw', 'vh', 's']
     },
+    indentation: 2,
     'no-descending-specificity': [
       true, {
         ignore: ['selectors-within-list'],
         severity: 'warning'
       }
     ],
+    'no-eol-whitespace': true,
     'number-leading-zero': 'always',
     'order/order': [
       'custom-properties',
