@@ -6,6 +6,8 @@ module.exports = {
   ],
   rules: {
     'at-rule-no-unknown': null,
+    'color-hex-case': 'lower',
+    'color-hex-length': 'short',
     'color-named': 'never',
     'declaration-property-unit-disallowed-list': {
       'font-size': ['vw', 'vh', 's']
