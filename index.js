@@ -20,10 +20,20 @@ module.exports = {
     'no-eol-whitespace': true,
     'number-leading-zero': 'always',
     'order/order': [
+      {
+        type: 'at-rule',
+        name: 'extend'
+      },
+      {
+        type: 'at-rule',
+        name: 'include'
+      },
       'custom-properties',
-      'declarations'
+      'declarations',
+      'at-rules'
     ],
     'order/properties-alphabetical-order': true,
     'scss/at-rule-no-unknown': true
+    'scss/at-rule-no-unknown': true,
   }
 }
