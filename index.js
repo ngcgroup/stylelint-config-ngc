@@ -33,7 +33,19 @@ module.exports = {
       'at-rules'
     ],
     'order/properties-alphabetical-order': true,
-    'scss/at-rule-no-unknown': true
+    'property-no-vendor-prefix': [
+      true, {
+        ignoreProperties: [
+          'appearance',
+          'backface-visibility',
+          'background-clip',
+          'hyphens',
+          'user-select'
+        ],
+        severity: 'warning'
+      }
+    ],
     'scss/at-rule-no-unknown': true,
+    'value-no-vendor-prefix': true
   }
 }
