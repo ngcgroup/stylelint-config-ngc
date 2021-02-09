@@ -48,6 +48,7 @@ module.exports = {
       }
     ],
     'scss/at-rule-no-unknown': true,
+    'selector-pseudo-element-colon-notation': 'double',
     'value-no-vendor-prefix': true
   }
 }
