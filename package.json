@@ -1,17 +1,17 @@
 {
   "name": "stylelint-config-ngc",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Shareable stylelint config used by NGC's CSS",
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "stylelint": ">= 10.0.0",
-    "stylelint-config-recommended": "^3.0.0",
-    "stylelint-order": "^4.0.0",
-    "stylelint-scss": "^3.14.2"
+    "stylelint": "^14.5.0",
+    "stylelint-config-recommended": "^7.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.2.0"
   },
   "devDependencies": {
-    "jest": "^26.4.2",
+    "jest": "^28.1.0",
     "standard": "*"
   },
   "scripts": {

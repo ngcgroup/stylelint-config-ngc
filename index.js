@@ -12,6 +12,7 @@ module.exports = {
     'declaration-property-unit-disallowed-list': {
       'font-size': ['vw', 'vh', 's']
     },
+    'function-no-unknown': null,
     indentation: 2,
     'no-descending-specificity': [
       true, {
@@ -48,6 +49,7 @@ module.exports = {
       }
     ],
     'scss/at-rule-no-unknown': true,
+    'scss/function-no-unknown': true,
     'selector-pseudo-element-colon-notation': 'double',
     'value-no-vendor-prefix': true
   }
