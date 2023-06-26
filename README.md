@@ -25,3 +25,4 @@ In the stylelint config file for your project, extend this configuration:
 
 * stylelint-order
 * stylelint-scss
+* stylelint-stylistic
