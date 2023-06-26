@@ -5328,6 +5328,7 @@ __metadata:
     stylelint-config-recommended: ^10.0.1
     stylelint-order: ^6.0.2
     stylelint-scss: ^4.5.0
+    stylelint-stylistic: ^0.4.2
   languageName: unknown
   linkType: soft
 
@@ -5363,6 +5364,20 @@ __metadata:
   peerDependencies:
     stylelint: ^14.5.1 || ^15.0.0
   checksum: 7818e7dd402864ae27dda9ea28213e0b25454f3dbe1524abf894050e677686614f7ca26437d45db1af9a352cc78466320741e91cc8694f9271a672db609319d9
+  languageName: node
+  linkType: hard
+
+"stylelint-stylistic@npm:^0.4.2":
+  version: 0.4.2
+  resolution: "stylelint-stylistic@npm:0.4.2"
+  dependencies:
+    postcss: ^8.4.21
+    postcss-media-query-parser: ^0.2.3
+    postcss-value-parser: ^4.2.0
+    style-search: ^0.1.0
+  peerDependencies:
+    stylelint: ^15.0.0
+  checksum: cd4e55b301b474df75e318f62552577b26f0a47a1bf7e96c5b1ed207dc58a1a12d27fe426da074449e81d692c41ca6e278ebf90c953bae163dcf8d419af3efad
   languageName: node
   linkType: hard
 
