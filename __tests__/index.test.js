@@ -52,14 +52,14 @@ describe('flags warnings with invalid css', () => {
   it('correct warning text', () => {
     return result.then((data) =>
       expect(data.results[0].warnings[0].text).toBe(
-        'Expected a leading zero (number-leading-zero)'
+        'Expected a leading zero (stylistic/number-leading-zero)'
       )
     )
   })
 
   it('correct rule flagged', () => {
     return result.then((data) =>
-      expect(data.results[0].warnings[0].rule).toBe('number-leading-zero')
+      expect(data.results[0].warnings[0].rule).toBe('stylistic/number-leading-zero')
     )
   })
 
